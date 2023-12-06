@@ -10,7 +10,15 @@
         "headers": {
           "Content-Type": "application/json"
         },
-        "polling_interval": 60
+        "polling_interval": 1
+      },
+      {
+        "name": "ws_1",
+        "type": "WebSocket",
+        "uri": "ws://localhost:6790",
+        "auth": {
+          "token": "WS_TOKEN_1"
+        }
       }
     ]
   }
