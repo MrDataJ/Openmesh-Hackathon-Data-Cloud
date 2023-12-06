@@ -23,9 +23,9 @@ All connection sources must be started before starting backend node.
 ### Starting the Server
 To start the backend server, navigate to the root directory of the project and run:
 
-```bash python main.py```
-
-This will start the React development server, and the frontend should be accessible at http://localhost:3000.
+```bash 
+python main.py
+```
 
 ## Frontend
 
