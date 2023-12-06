@@ -49,14 +49,3 @@ Contributions to the project are welcome. Please ensure to follow the existing c
 
 ## License
 MIT
-
-
-### Notes for README:
-
-- Adjust the paths, commands, and URLs as necessary based on your actual project structure and setup.
-- Add any additional instructions or descriptions that are specific to your project.
-- You might also want to include a section on how to run tests if you have them.
-- The `License` section should correspond to the actual license of your project; replace `[MIT]` with the appropriate one if different.
-- If your frontend requires additional setup steps (like environment variables or specific build instructions), be sure to include them.
-
-This README provides a basic guideline and can be expanded with more details about the project, such as its architecture, features, and screenshots of the application in action.
