@@ -1,0 +1,74 @@
+{
+    "connecters": [
+      {
+        "type": "REST",
+        "endpoint": "https://api.example1.com/data",
+        "auth": {
+          "token": "API_TOKEN_1"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "polling_interval": 60
+      },
+      {
+        "type": "REST",
+        "endpoint": "https://api.example2.com/data",
+        "auth": {
+          "token": "API_TOKEN_2"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "polling_interval": 45
+      },
+      {
+        "type": "REST",
+        "endpoint": "https://api.example3.com/data",
+        "auth": {
+          "token": "API_TOKEN_3"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "polling_interval": 30
+      },
+      {
+        "type": "REST",
+        "endpoint": "https://api.example4.com/data",
+        "auth": {
+          "token": "API_TOKEN_4"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "polling_interval": 120
+      },
+      {
+        "type": "REST",
+        "endpoint": "https://api.example5.com/data",
+        "auth": {
+          "token": "API_TOKEN_5"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "polling_interval": 30
+      },
+      {
+        "type": "WebSocket",
+        "uri": "wss://websocket.example1.com",
+        "auth": {
+          "token": "WS_TOKEN_1"
+        }
+      },
+      {
+        "type": "WebSocket",
+        "uri": "wss://websocket.example2.com",
+        "auth": {
+          "token": "WS_TOKEN_2"
+        }
+      }
+    ]
+  }
+  

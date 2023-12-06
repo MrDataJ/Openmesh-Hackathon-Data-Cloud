@@ -1,0 +1,17 @@
+{
+    "connectors": [
+      {
+        "name": "API_1",
+        "type": "REST",
+        "endpoint": "https://jsonplaceholder.typicode.com/todos/1",
+        "auth": {
+          "token": "API_TOKEN_1"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "polling_interval": 60
+      }
+    ]
+  }
+  
