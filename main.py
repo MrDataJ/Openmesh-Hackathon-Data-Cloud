@@ -56,7 +56,7 @@ async def ingest_and_process_data(websocket_server, data_queue):
     # Connect to peer nodes if there are any defined in the configuration
     peer_nodes = load_config('peers.json')['peers']  # Assuming a peers.json file
     for peer_uri in peer_nodes:
-        task = asyncio.create_task(websocket_server.connect_to_peer(peer_uri))
+        task = asyncio.create_task(websocket_server.connect_to_peers())
         tasks.append(task)
 
     await asyncio.gather(*tasks)
