@@ -52,13 +52,23 @@ async def ingest_and_process_data(websocket_server, data_queue):
             adapter = WebSocketAdapter(connector['uri'])
             task = asyncio.create_task(handle_websocket(adapter, data_queue))
             tasks.append(task)
+
+    # Connect to peer nodes if there are any defined in the configuration
+    peer_nodes = load_config('peers.json')['peers']  # Assuming a peers.json file
+    for peer_uri in peer_nodes:
+        task = asyncio.create_task(websocket_server.connect_to_peer(peer_uri))
+        tasks.append(task)
+
     await asyncio.gather(*tasks)
 
 async def main():
     logging.info("Starting the application...")
     db_manager = DBManager("database.sqlite")
     db_manager.create_connection()
-    websocket_server = WebSocketServer('localhost', 6789)
+
+    # Load peer nodes from configuration
+    peer_nodes = load_config('peers.json')['peers']  # Assuming a peers.json file
+    websocket_server = WebSocketServer('localhost', 6789, peer_nodes)
     start_server = websocket_server.start_server()
     data_queue = asyncio.Queue()
 
